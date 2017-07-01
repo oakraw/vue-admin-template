@@ -49,7 +49,7 @@ export default {
         this.$refs.progressDialog.hide();
         setTimeout(() => {
           this.$router.push({
-            name: 'home',
+            name: 'profile',
           });
         }, 100);
       });
