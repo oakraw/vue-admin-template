@@ -1,5 +1,7 @@
 <template>
-<router-view></router-view>
+<v-app class="fit-height">
+  <router-view></router-view>
+</v-app>
 </template>
 
 <script>

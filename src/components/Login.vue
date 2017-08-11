@@ -1,29 +1,31 @@
 <template>
-<v-container fluid class="center fit-height">
-  <v-layout row wrap class="fit-width">
+<div class="fit-height">
+<v-container class="center fit-height">
+  <v-layout column wrap class="fit-width">
+    <v-spacer></v-spacer>
     <v-flex xs12 sm6 offset-sm3 md4 offset-md4>
       <v-card>
-        <v-card-row class="primary">
-          <v-card-title>
-            <span class="white--text fit-width text-xs-center my-3">TITLE</span>
-          </v-card-title>
-        </v-card-row>
+        <v-card-title class="primary">
+          <h3 class="white--text fit-width text-xs-center my-3">TITLE</h3>
+        </v-card-title>
         <v-card-text>
           <v-container fluid>
             <v-text-field v-model="email" name="input-email" label="Email" type="email"></v-text-field>
-
             <v-text-field v-model="password" name="input-password" label="Password" hint="At least 8 characters" min="8" value="" type="password"></v-text-field>
             <!-- <div class="text-xs-center" v-if="loggingIn">
                   <v-progress-circular indeterminate v-bind:size="50" class="primary--text"></v-progress-circular>
                 </div> -->
-            <v-btn primary block light @click.native="login">Login</v-btn>
+            <v-btn primary block dark @click.native="login">Login</v-btn>
           </v-container>
+
         </v-card-text>
       </v-card>
     </v-flex>
+    <v-spacer></v-spacer>
   </v-layout>
   <progress-dialog ref="progressDialog" message="Logging in..."></progress-dialog>
 </v-container>
+</div>
 </template>
 
 <script>
